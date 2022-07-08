@@ -9,6 +9,9 @@ pragma solidity ^0.8.4;
 // very first step, like defining a class and all the code goes inside
 // everything is explicitly declared
 // contracts can be inherited
-contract LearningSolidity {
+contract CryptoToken {
+
+    // unassigned integer variable
+    uint public tokens = 400;
 
 }
