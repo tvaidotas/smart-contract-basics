@@ -18,6 +18,21 @@ contract CryptoToken {
 
     // other visibility modifiers are: internal, external, private, public
 
+    // mapping acts like a dictionary to store data
+    // takes a key and value (key => value)
+    mapping(address => uint) public balances;
+
+    // Events allow clients to react to contract changes that you declare
+    // one way logging of transactions
+    // types of events: Sent, Transfer, Allow
+    // events take two steps
+    // setting it up
+    // emitting the event
+
+    // preconditioned arguments (inputs) we should pass
+    // from to and amount are the preconditioned arguments
+    event Sent(address from, address to, uint amount);
+
     // gets called immediately when the contract is deployed
     // will only be called once
     constructor() {
