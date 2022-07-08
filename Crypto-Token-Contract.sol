@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-// all .sol files should start with a license declaration, can use MIT for oper source or UNLICENSED for private
 
 // defines our compiler and the version of it
 // ^ defines a range compile version after the non zero
@@ -14,4 +13,8 @@ contract CryptoToken {
     // unassigned integer variable
     uint public tokens = 400;
 
+    // only want the msg.sender (the current caller)(us essentially) to be able to mint tokens
+    address public minter;
+
+    // other visibility modifiers are: internal, external, private, public
 }
