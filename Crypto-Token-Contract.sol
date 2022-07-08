@@ -33,6 +33,10 @@ contract CryptoToken {
     // from to and amount are the preconditioned arguments
     event Sent(address from, address to, uint amount);
 
+    function mint(address receiver, uint amount) public {
+        // only the owner of this contract should be able to mint
+    }
+
     // gets called immediately when the contract is deployed
     // will only be called once
     constructor() {
