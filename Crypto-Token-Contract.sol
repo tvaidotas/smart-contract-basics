@@ -34,7 +34,10 @@ contract CryptoToken {
     event Sent(address from, address to, uint amount);
 
     function mint(address receiver, uint amount) public {
-        // only the owner of this contract should be able to mint
+        // only the owner of this contract should be able to mint, this is ensured with require
+
+        // checks the thruthyness within it's parentheses
+        require(msg.sender == minter);
     }
 
     // gets called immediately when the contract is deployed
