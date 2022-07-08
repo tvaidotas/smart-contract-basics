@@ -38,7 +38,12 @@ contract CryptoToken {
 
         // checks the thruthyness within it's parentheses
         require(msg.sender == minter);
+
+        // we set up amount to a specific address
+        balances[receiver] += amount;
     }
+
+    
 
     // gets called immediately when the contract is deployed
     // will only be called once
