@@ -17,4 +17,11 @@ contract CryptoToken {
     address public minter;
 
     // other visibility modifiers are: internal, external, private, public
+
+    // gets called immediately when the contract is deployed
+    // will only be called once
+    constructor() {
+        minter = msg.sender; // sets the address of the person deploying the contract
+    }
+
 }
